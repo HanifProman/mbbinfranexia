@@ -1,38 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>7 tahun kerja baru 1x promosi</title>
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
 </head>
-
 <body>
-
-  <iframe
+  <iframe 
     src="https://script.google.com/macros/s/AKfycbx06bf2mxmSKf4CetxTs61NG6cJceJ--5ZpiynbOkI9smUZpA3iuMSQmfiq0szwsDjO/exec"
-    allowfullscreen>
+    width="100%"
+    height="100%"
+    allowfullscreen="true"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
 
+  <script>
+    window.onload = function() {
+      document.querySelector('iframe')
+        .requestFullscreen()
+        .catch((err) => {
+          console.error('Error attempting to enable full-screen mode:', err.message);
+        });
+    };
+  </script>
 </body>
 </html>
